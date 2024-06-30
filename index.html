@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Trip Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Holiday Trip Planner</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="trip-planner.html">Trip Planner</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="profile-icon">
+            <img src="images/profile.png" alt="Profile" id="profileIcon">
+            <div class="dropdown-content" id="profileDropdown">
+                <a href="#">Settings & Privacy</a>
+                <a href="#">Help & Support</a>
+                <a href="#">Display & Accessibility</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Plan Your Perfect Holiday</h2>
+            <p>Find the best destinations, plan your trip, and book your travel and accommodation all in one place.</p>
+            <form class="search-bar">
+                <input type="text" placeholder="Search destinations...">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="featured-destinations">
+            <h3>Featured Destinations</h3>
+            <div class="destinations-grid">
+                <div class="destination">
+                    <img src="images/paris.jpg" alt="Paris">
+                    <h4>Paris</h4>
+                    <p>The city of lights and love.</p>
+                    <a href="paris.html" class="explore-more">Explore more &gt;</a>
+                </div>
+                <div class="destination">
+                    <img src="images/newyork.jpg" alt="New York">
+                    <h4>New York</h4>
+                    <p>The city that never sleeps.</p>
+                    <a href="newyork.html" class="explore-more">Explore more &gt;</a>
+                </div>
+                <div class="destination">
+                    <img src="images/tokyo.webp" alt="Tokyo">
+                    <h4>Tokyo</h4>
+                    <p>A perfect blend of tradition and technology.</p>
+                    <a href="tokyo.html" class="explore-more">Explore more &gt;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="user-reviews">
+            <h3>User Reviews</h3>
+            <div class="reviews-grid">
+                <div class="review">
+                    <p>"Had an amazing time in Paris thanks to this site!" - John</p>
+                </div>
+                <div class="review">
+                    <p>"Booking my trip to New York was so easy!" - Sarah</p>
+                </div>
+                <div class="review">
+                    <p>"Loved the recommendations for Tokyo!" - Mike</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="special-offers">
+            <h3>Special Offers</h3>
+            <div class="offers-grid">
+                <div class="offer">
+                    <p>Get 10% off on your first booking!</p>
+                </div>
+                <div class="offer">
+                    <p>Exclusive deals for summer trips.</p>
+                </div>
+                <div class="offer">
+                    <p>Early bird discounts for winter vacations.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot-pannel1">
+            <a class="foot-route" href="#top">Back to Top</a>
+        </div>
+        <div class="foot-pannel2">
+            <ul>
+                <p>ABOUT</p>
+                <a>Contact Us</a>
+                <a>About Us</a>
+                <a>Careers</a>
+                <a>infiMart Stories</a>
+                <a>Press</a>
+                <a>infiMart Wholesale</a>
+                <a>Cleartrip</a>
+                <a>Corporate Information</a>
+            </ul>
+            <ul>
+                <p>HELP</p>
+                <a>Payments</a>
+                <a>Shipping</a>
+                <a>Cancellation & Returns</a>
+                <a>FAQ</a>
+                <a>Report Infringement</a>
+            </ul>
+            <ul>
+                <p>CONSUMER POLICY</p>
+                <a>Cancellation & Returns</a>
+                <a>Terms Of Use</a>
+                <a>Sitemap</a>
+                <a>Grievance Redressal</a>
+                <a>Privacy</a>
+                <a>EPR Compliance</a>
+                <a>Security</a>
+            </ul>
+            <ul>
+                <p>SOCIAL</p>
+                <a>Facebook</a>
+                <a>Twitter</a>
+                <a>YouTube</a>
+            </ul>
+        </div>
+        <div class="foot-pannel3">
+            <div class="logo"></div>
+        </div>
+        <div class="foot-pannel4">
+            <div class="pages">
+                <a>Conditions of use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                © 2022-2023 infiMart.com
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll to top
+        document.querySelector('.foot-route').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Profile dropdown
+        document.getElementById('profileIcon').addEventListener('click', function () {
+            var dropdown = document.getElementById('profileDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('#profileIcon')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

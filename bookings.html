@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Holiday Trip Planner</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="trip-planner.html">Trip Planner</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-options">
+            <h2>Choose Your Booking</h2>
+            <div class="options-container">
+                <div class="option" onclick="showBookingForm('train')">
+                    <img src="images/train.jpg" alt="Train">
+                    <p>Train</p>
+                </div>
+                <div class="option" onclick="showBookingForm('bus')">
+                    <img src="images/bus.jpg" alt="Bus">
+                    <p>Bus</p>
+                </div>
+                <div class="option" onclick="showBookingForm('flight')">
+                    <img src="images/flight.jpg" alt="Flight">
+                    <p>Flight</p>
+                </div>
+                <div class="option" onclick="showBookingForm('ship')">
+                    <img src="images/ship.jpg" alt="Ship">
+                    <p>Ship</p>
+                </div>
+                <div class="option" onclick="showBookingForm('hotel')">
+                    <img src="images/hotel.jpg" alt="Hotel">
+                    <p>Hotel</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-forms">
+            <div id="train-booking-form" class="booking-form" style="display: none;">
+                <h3>Train Booking</h3>
+                <form>
+                    <label for="train-origin">Origin:</label>
+                    <input type="text" id="train-origin" name="train-origin" required>
+
+                    <label for="train-destination">Destination:</label>
+                    <input type="text" id="train-destination" name="train-destination" required>
+
+                    <label for="train-date">Travel Date:</label>
+                    <input type="date" id="train-date" name="train-date" required>
+
+                    <button type="submit">Book Train</button>
+                </form>
+            </div>
+
+            <div id="bus-booking-form" class="booking-form" style="display: none;">
+                <h3>Bus Booking</h3>
+                <form>
+                    <label for="bus-origin">Origin:</label>
+                    <input type="text" id="bus-origin" name="bus-origin" required>
+
+                    <label for="bus-destination">Destination:</label>
+                    <input type="text" id="bus-destination" name="bus-destination" required>
+
+                    <label for="bus-date">Travel Date:</label>
+                    <input type="date" id="bus-date" name="bus-date" required>
+
+                    <button type="submit">Book Bus</button>
+                </form>
+            </div>
+
+            <div id="flight-booking-form" class="booking-form" style="display: none;">
+                <h3>Flight Booking</h3>
+                <form>
+                    <label for="flight-origin">Origin:</label>
+                    <input type="text" id="flight-origin" name="flight-origin" required>
+
+                    <label for="flight-destination">Destination:</label>
+                    <input type="text" id="flight-destination" name="flight-destination" required>
+
+                    <label for="flight-date">Travel Date:</label>
+                    <input type="date" id="flight-date" name="flight-date" required>
+
+                    <button type="submit">Book Flight</button>
+                </form>
+            </div>
+
+            <div id="ship-booking-form" class="booking-form" style="display: none;">
+                <h3>Ship Booking</h3>
+                <form>
+                    <label for="ship-origin">Origin:</label>
+                    <input type="text" id="ship-origin" name="ship-origin" required>
+
+                    <label for="ship-destination">Destination:</label>
+                    <input type="text" id="ship-destination" name="ship-destination" required>
+
+                    <label for="ship-date">Shipping Date:</label>
+                    <input type="date" id="ship-date" name="ship-date" required>
+
+                    <button type="submit">Book Ship</button>
+                </form>
+            </div>
+
+            <div id="hotel-booking-form" class="booking-form" style="display: none;">
+                <h3>Hotel Accommodation</h3>
+                <form>
+                    <label for="hotel-location">Location:</label>
+                    <input type="text" id="hotel-location" name="hotel-location" required>
+
+                    <label for="hotel-checkin">Check-in Date:</label>
+                    <input type="date" id="hotel-checkin" name="hotel-checkin" required>
+
+                    <label for="hotel-checkout">Check-out Date:</label>
+                    <input type="date" id="hotel-checkout" name="hotel-checkout" required>
+
+                    <button type="submit">Book Hotel</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot-pannel1">
+            <a class="foot-route" href="#top">Back to Top</a>
+        </div>
+        <div class="foot-pannel2">
+            <ul>
+                <p>ABOUT</p>
+                <a>Contact Us</a>
+                <a> About Us</a>
+                <a>Careers</a>
+                <a>infiMart Stories</a>
+                <a>Press</a>
+                <a>infiMart Wholesale</a>
+                <a>Cleartrip</a>
+                <a>Corporate Information</a>
+            </ul>
+            <ul>
+                <p>HELP</p>
+                <a>Payments</a>
+                <a>Shipping</a>
+                <a>Cancellation & Returns</a>
+                <a>FAQ</a>
+                <a>Report Infringement</a>
+            </ul>
+            <ul>
+                <p>CONSUMER POLICY</p>
+                <a>Cancellation & Returns</a>
+                <a>Terms Of Use</a>
+                <a>Sitemap</a>
+                <a>Grievance Redressal</a>
+                <a>Privacy</a>
+                <a>EPR Compliance</a>
+                <a>Security</a>
+            </ul>
+            <ul>
+                <p>SOCIAL</p>
+                <a>Facebook</a>
+                <a> Twitter</a>
+                <a> YouTube</a>
+            </ul>
+        </div>
+        <div class="foot-pannel3">
+            <div class="logo"></div>
+        </div>
+        <div class="foot-pannel4">
+            <div class="pages">
+                <a>Conditions of use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                © 2022-2023 infiMart.com
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll to top
+        document.querySelector('.foot-route').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Function to show the respective booking form
+        function showBookingForm(formType) {
+            const forms = document.querySelectorAll('.booking-form');
+            forms.forEach(form => form.style.display = 'none');
+            document.getElementById(`${formType}-booking-form`).style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

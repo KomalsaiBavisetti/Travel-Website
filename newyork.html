@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore New York</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Holiday Trip Planner</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="trip-planner.html">Trip Planner</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destination-details">
+            <a href="index.html" class="explore-more">
+                < Back</a>
+            <h2>Explore New York</h2>
+            <p>New York City, the largest city in the United States, is known for its bustling streets, iconic
+                landmarks, and diverse culture. From Times Square to Central Park, there's something for everyone in
+                NYC.</p>
+            <div class="images">
+                <img src="images/statue_of_liberty.jpg" alt="Statue of Liberty">
+                <img src="images/times_square.jpeg" alt="Times Square">
+                <img src="images/central_park.jpg" alt="Central Park">
+            </div>
+            <h3>Must-Visit Places</h3>
+            <div class="must-visit-places">
+                <div class="place">
+                    <img src="images/libarty.jpg" alt="Statue of Liberty">
+                    <div class="place-name">Statue of Liberty</div>
+                </div>
+                <div class="place">
+                    <img src="images/times_square.jpg" alt="Times Square">
+                    <div class="place-name">Times Square</div>
+                </div>
+                <div class="place">
+                    <img src="images/Central_park1.jpg" alt="Central Park">
+                    <div class="place-name">Central Park</div>
+                </div>
+                <div class="place">
+                    <img src="images/empire_state.jpg" alt="Empire State Building">
+                    <div class="place-name">Empire State Building</div>
+                </div>
+                <div class="place">
+                    <img src="images/Brooklyn Bridge.jpg" alt="Brooklyn Bridge">
+                    <div class="place-name">Brooklyn Bridge</div>
+                </div>
+                <div class="place">
+                    <img src="images/The Metropolitan Museum of Art.jpg" alt="The Metropolitan Museum of Art ">
+                    <div class="place-name">The Metropolitan Museum of Art</div>
+                </div>
+                <div class="place">
+                    <img src="images/St. Patrick's Cathedral.jpg" alt="St. Patrick's Cathedral">
+                    <div class="place-name">St. Patrick's Cathedral</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-option">
+            <h3>Book Your Trip to New York</h3>
+            <form class="booking-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="date">Travel Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+
+   <footer>
+    <div class="foot-pannel1">
+        <a class="foot-route" href="#top">Back to Top</a>
+    </div>
+    <div class="foot-pannel2">
+        <ul>
+            <p>ABOUT</p>
+            <a>Contact Us</a>
+            <a> About Us</a>
+            <a>Careers</a>
+            <a>infiMart Stories</a>
+            <a>Press</a>
+            <a>infiMart Wholesale</a>
+            <a>Cleartrip</a>
+            <a>Corporate Information</a>
+        </ul>
+        <ul>
+            <p>HELP</p>
+            <a>Payments</a>
+            <a>Shipping</a>
+            <a>Cancellation & Returns</a>
+            <a>FAQ</a>
+            <a>Report Infringement</a>
+        </ul>
+        <ul>
+            <p>CONSUMER POLICY</p>
+            <a>Cancellation & Returns</a>
+            <a>Terms Of Use</a>
+            <a>Sitemap</a>
+            <a>Grievance Redressal</a>
+            <a>Privacy</a>
+            <a>EPR Compliance</a>
+            <a>Security</a>
+        </ul>
+        <ul>
+            <p>SOCIAL</p>
+            <a>Facebook</a>
+            <a> Twitter</a>
+            <a> YouTube</a>
+        </ul>
+    </div>
+    <div class="foot-pannel3">
+        <div class="logo"></div>
+    </div>
+    <div class="foot-pannel4">
+        <div class="pages">
+            <a>Conditions of use</a>
+            <a>Privacy Notice</a>
+            <a>Your Ads Privacy Choices</a>
+        </div>
+        <div class="copyright">
+            © 2022-2023 infiMart.com
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Smooth scroll to top
+    document.querySelector('.foot-route').addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+</body>
+
+</html>

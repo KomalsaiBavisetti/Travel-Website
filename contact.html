@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Holiday Trip Planner</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="trip-planner.html">Trip Planner</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="chat-box">
+                    <h3>Chat with Us</h3>
+                    <div class="chat-window" id="chat-window">
+                        <div class="message bot">Hello! How can I help you today?</div>
+                    </div>
+                    <form id="chat-form">
+                        <input type="text" id="user-input" placeholder="Type your message here..." required>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+
+                <div class="faq-section">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq">
+                        <div class="faq-question" onclick="toggleAnswer('faq1')">What is the refund policy?</div>
+                        <div class="faq-answer" id="faq1">Our refund policy allows refunds within 30 days of purchase.
+                            Please contact support for more details.</div>
+                    </div>
+                    <div class="faq">
+                        <div class="faq-question" onclick="toggleAnswer('faq2')">How can I change my booking?</div>
+                        <div class="faq-answer" id="faq2">To change your booking, please log in to your account and
+                            visit the 'My Bookings' section.</div>
+                    </div>
+                    <div class="faq">
+                        <div class="faq-question" onclick="toggleAnswer('faq3')">What payment methods are accepted?
+                        </div>
+                        <div class="faq-answer" id="faq3">We accept all major credit cards, debit cards, and PayPal.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-us">
+                <h3>About Us</h3>
+                <p>We are a team of passionate travelers dedicated to making your trip planning seamless and enjoyable.
+                    Our platform offers comprehensive travel solutions including destination recommendations, trip
+                    planning tools, and convenient booking options.</p>
+                <div class="founder">
+                    <img src="images/founder.jpg" alt="Founder Photo">
+                    <p><strong>Komal Bavisetti </strong><br>Founder & CEO</p>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Phone:</strong> +123-456-7890</p>
+                <p><strong>Email:</strong> support@holidaytripplanner.com</p>
+                <p><strong>Address:</strong> 123 Travel St, Adventure City, Explore Country</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot-pannel1">
+            <a class="foot-route" href="#top">Back to Top</a>
+        </div>
+        <div class="foot-pannel2">
+            <ul>
+                <p>ABOUT</p>
+                <a>Contact Us</a>
+                <a> About Us</a>
+                <a>Careers</a>
+                <a>infiMart Stories</a>
+                <a>Press</a>
+                <a>infiMart Wholesale</a>
+                <a>Cleartrip</a>
+                <a>Corporate Information</a>
+            </ul>
+            <ul>
+                <p>HELP</p>
+                <a>Payments</a>
+                <a>Shipping</a>
+                <a>Cancellation & Returns</a>
+                <a>FAQ</a>
+                <a>Report Infringement</a>
+            </ul>
+            <ul>
+                <p>CONSUMER POLICY</p>
+                <a>Cancellation & Returns</a>
+                <a>Terms Of Use</a>
+                <a>Sitemap</a>
+                <a>Grievance Redressal</a>
+                <a>Privacy</a>
+                <a>EPR Compliance</a>
+                <a>Security</a>
+            </ul>
+            <ul>
+                <p>SOCIAL</p>
+                <a>Facebook</a>
+                <a> Twitter</a>
+                <a> YouTube</a>
+            </ul>
+        </div>
+        <div class="foot-pannel3">
+            <div class="logo"></div>
+        </div>
+        <div class="foot-pannel4">
+            <div class="pages">
+                <a>Conditions of use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                © 2022-2023 infiMart.com
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAnswer(faqId) {
+            const answer = document.getElementById(faqId);
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+
+        document.getElementById('chat-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const userInput = document.getElementById('user-input').value;
+            const chatWindow = document.getElementById('chat-window');
+
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('message', 'user');
+            userMessage.textContent = userInput;
+            chatWindow.appendChild(userMessage);
+
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('message', 'bot');
+            botMessage.textContent = "Thank you for your message. We'll get back to you soon.";
+            chatWindow.appendChild(botMessage);
+
+            document.getElementById('user-input').value = '';
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        });
+    </script>
+</body>
+
+</html>

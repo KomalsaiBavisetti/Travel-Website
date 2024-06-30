@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Tokyo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Holiday Trip Planner</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="trip-planner.html">Trip Planner</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destination-details">
+            <a href="index.html" class="explore-more">
+                < Back</a>
+            <h2>Explore Tokyo</h2>
+            <p>Tokyo, the bustling capital of Japan, is a city where traditional culture and cutting-edge technology
+                coexist harmoniously. From ancient temples to skyscrapers, Tokyo offers a unique experience.</p>
+            <div class="images">
+                <img src="images/tokyo_tower.jpg" alt="Tokyo Tower">
+                <img src="images/Shibuya_Crossing.jpeg" alt="Shibuya Crossing">
+                <img src="images/asakusa.avif" alt="Asakusa Temple">
+            </div>
+            <h3>Must-Visit Places</h3>
+            <div class="must-visit-places">
+                <div class="place">
+                    <img src="images/tokyo_tower.jpg" alt="Tokyo Tower">
+                    <div class="place-name">Tokyo Tower</div>
+                </div>
+                <div class="place">
+                    <img src="images/Shibuya Crossing.jpeg" alt="Shibuya Crossing">
+                    <div class="place-name">Shibuya Crossing</div>
+                </div>
+                <div class="place">
+                    <img src="images/Asakusa Temple.jpeg" alt="Asakusa Temple">
+                    <div class="place-name">Asakusa Temple</div>
+                </div>
+                <div class="place">
+                    <img src="images/Meiji Shrine.jpg" alt="Meiji Shrine">
+                    <div class="place-name">Meiji Shrine</div>
+                </div>
+                <div class="place">
+                    <img src="images/Akihabara.jpg" alt="Akihabara">
+                    <div class="place-name">Akihabara</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-option">
+            <h3>Book Your Trip to Tokyo</h3>
+            <form class="booking-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="date">Travel Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot-pannel1">
+            <a class="foot-route" href="#top">Back to Top</a>
+        </div>
+        <div class="foot-pannel2">
+            <ul>
+                <p>ABOUT</p>
+                <a>Contact Us</a>
+                <a> About Us</a>
+                <a>Careers</a>
+                <a>infiMart Stories</a>
+                <a>Press</a>
+                <a>infiMart Wholesale</a>
+                <a>Cleartrip</a>
+                <a>Corporate Information</a>
+            </ul>
+            <ul>
+                <p>HELP</p>
+                <a>Payments</a>
+                <a>Shipping</a>
+                <a>Cancellation & Returns</a>
+                <a>FAQ</a>
+                <a>Report Infringement</a>
+            </ul>
+            <ul>
+                <p>CONSUMER POLICY</p>
+                <a>Cancellation & Returns</a>
+                <a>Terms Of Use</a>
+                <a>Sitemap</a>
+                <a>Grievance Redressal</a>
+                <a>Privacy</a>
+                <a>EPR Compliance</a>
+                <a>Security</a>
+            </ul>
+            <ul>
+                <p>SOCIAL</p>
+                <a>Facebook</a>
+                <a> Twitter</a>
+                <a> YouTube</a>
+            </ul>
+        </div>
+        <div class="foot-pannel3">
+            <div class="logo"></div>
+        </div>
+        <div class="foot-pannel4">
+            <div class="pages">
+                <a>Conditions of use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                © 2022-2023 infiMart.com
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scroll to top
+        document.querySelector('.foot-route').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+
+</html>

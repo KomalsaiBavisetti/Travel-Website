@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Holiday Trip Planner</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="trip-planner.html">Trip Planner</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="trip-planner">
+            <h2>Plan Your Trip</h2>
+            <form id="trip-form">
+                <label for="destination">Destination:</label>
+                <select id="destination" name="destination" required>
+                    <option value="Ooty">Ooty</option>
+                    <option value="Pondicherry">Pondicherry</option>
+                    <option value="Shimla">Shimla</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Manali">Manali</option>
+                </select>
+
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date" required>
+
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" name="end-date" required>
+
+                <label for="transportation">Transportation:</label>
+                <select id="transportation" name="transportation" required>
+                    <option value="Train">Train</option>
+                    <option value="Bus">Bus</option>
+                    <option value="Flight">Flight</option>
+                    <option value="Car">Car</option>
+                </select>
+
+                <label for="accommodation">Accommodation:</label>
+                <input type="text" id="accommodation" name="accommodation" placeholder="Enter hotel or stay details"
+                    required>
+
+                <button type="submit">Plan Trip</button>
+            </form>
+
+            <div id="trip-details" class="trip-details">
+                <!-- Trip details will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot-pannel1">
+            <a class="foot-route" href="#top">Back to Top</a>
+        </div>
+        <div class="foot-pannel2">
+            <ul>
+                <p>ABOUT</p>
+                <a>Contact Us</a>
+                <a> About Us</a>
+                <a>Careers</a>
+                <a>infiMart Stories</a>
+                <a>Press</a>
+                <a>infiMart Wholesale</a>
+                <a>Cleartrip</a>
+                <a>Corporate Information</a>
+            </ul>
+            <ul>
+                <p>HELP</p>
+                <a>Payments</a>
+                <a>Shipping</a>
+                <a>Cancellation & Returns</a>
+                <a>FAQ</a>
+                <a>Report Infringement</a>
+            </ul>
+            <ul>
+                <p>CONSUMER POLICY</p>
+                <a>Cancellation & Returns</a>
+                <a>Terms Of Use</a>
+                <a>Sitemap</a>
+                <a>Grievance Redressal</a>
+                <a>Privacy</a>
+                <a>EPR Compliance</a>
+                <a>Security</a>
+            </ul>
+            <ul>
+                <p>SOCIAL</p>
+                <a>Facebook</a>
+                <a> Twitter</a>
+                <a> YouTube</a>
+            </ul>
+        </div>
+        <div class="foot-pannel3">
+            <div class="logo"></div>
+        </div>
+        <div class="foot-pannel4">
+            <div class="pages">
+                <a>Conditions of use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                © 2022-2023 infiMart.com
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll to top
+        document.querySelector('.foot-route').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Trip Planner form submission
+        document.getElementById('trip-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const destination = document.getElementById('destination').value;
+            const startDate = document.getElementById('start-date').value;
+            const endDate = document.getElementById('end-date').value;
+            const transportation = document.getElementById('transportation').value;
+            const accommodation = document.getElementById('accommodation').value;
+
+            const tripDetails = `
+                <h3>Trip Details</h3>
+                <p><strong>Destination:</strong> ${destination}</p>
+                <p><strong>Start Date:</strong> ${startDate}</p>
+                <p><strong>End Date:</strong> ${endDate}</p>
+                <p><strong>Transportation:</strong> ${transportation}</p>
+                <p><strong>Accommodation:</strong> ${accommodation}</p>
+            `;
+
+            document.getElementById('trip-details').innerHTML = tripDetails;
+        });
+    </script>
+</body>
+
+</html>
